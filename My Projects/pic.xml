@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<image>
+	<dimensions>
+		<height>5</height>
+		<width>5</width>
+		<scale>20</scale>
+	</dimensions>
+	
+	<colours>
+		<fill>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</fill>
+
+		<colour>
+			<xCoord>1</xCoord>
+			<yCoord>1</yCoord>
+			<red>255</red>
+			<blue>255</blue>
+			<green>255</green>
+		</colour>
+
+		<colour>
+			<xCoord>2</xCoord>
+			<yCoord>1</yCoord>
+			<red>255</red>
+			<blue>255</blue>
+			<green>255</green>
+		</colour>
+
+		<colour>
+			<xCoord>3</xCoord>
+			<yCoord>1</yCoord>
+			<red>255</red>
+			<blue>255</blue>
+			<green>255</green>
+		</colour>
+
+		<colour>
+			<xCoord>1</xCoord>
+			<yCoord>2</yCoord>
+			<red>255</red>
+			<blue>100</blue>
+			<green>255</green>
+		</colour>
+
+		<colour>
+			<xCoord>2</xCoord>
+			<yCoord>2</yCoord>
+			<red>255</red>
+			<blue>255</blue>
+			<green>255</green>
+		</colour>
+
+		<colour>
+			<xCoord>3</xCoord>
+			<yCoord>2</yCoord>
+			<red>255</red>
+			<blue>255</blue>
+			<green>255</green>
+		</colour>
+
+		<colour>
+			<xCoord>1</xCoord>
+			<yCoord>3</yCoord>
+			<red>255</red>
+			<blue>255</blue>
+			<green>255</green>
+		</colour>
+
+		<colour>
+			<xCoord>2</xCoord>
+			<yCoord>3</yCoord>
+			<red>255</red>
+			<blue>255</blue>
+			<green>255</green>
+		</colour>
+
+		<colour>
+			<xCoord>3</xCoord>
+			<yCoord>3</yCoord>
+			<red>255</red>
+			<blue>255</blue>
+			<green>255</green>
+		</colour>
+
+	</colours>
+</image>

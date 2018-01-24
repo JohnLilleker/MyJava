@@ -1,0 +1,42 @@
+/ Rachel's dream team
+-p Tauros -g MALE -n Calm -l 50
+-a Giga_Impact
+-a Zen_Headbutt
+-a Strength
+-a Uproar
+
+-p Aipom -g FEMALE -n Brave -l 50
+-a Swift
+-a Thunderbolt
+-a Ice_Punch
+-a Fire_Punch
+
+-p Lapras -g MALE -n Relaxed -l 50
+-a Hydro_Pump
+-a Surf
+-a Dragin_Pulse
+-a Freeze_Dry
+
+-p Growlithe -g MALE -n Timid -l 50
+-a Flame_Burst
+-a Fire_Fang
+-a Wild_Charge
+-a Close_Combat
+
+-p Eevee -g FEMALE -n Sassy -l 50
+-a Swift
+-a Dig
+-a Synchronoise
+-a Covet
+
+-p Yanmega -g MALE -n Naughty -l 50
+-a Bug_Buzz
+-a U-Turn
+-a Giga_Drain
+-a Air_Slash
+
+-p Lucario -g FEMALE -n Adamant -l 50
+-a Aura_Sphere
+-a Shadow_Ball
+-a Dragon_Pulse
+-a Blaze_Kick

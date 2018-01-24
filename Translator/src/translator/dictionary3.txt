@@ -1,0 +1,9 @@
+%comment = //
+
+// testing change param reading
+
+dog = fish
+cat =(*, 1, 2) fish
+the =(2, 0, 2) a
+
+"are " (\d+) @SPACE (\w+) = "is only " $1 @SPACE $2

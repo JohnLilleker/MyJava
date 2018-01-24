@@ -1,0 +1,3 @@
+cat = tac
+dog = god
+fish = hsif

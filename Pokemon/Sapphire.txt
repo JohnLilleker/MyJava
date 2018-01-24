@@ -1,0 +1,18 @@
+-p Gengar -l 50 -I Persim_Berry
+-a Hypnosis
+-a Dream_Eater
+-a Shadow_Ball
+-a Night_Shade
+
+-p Stoutland -l 50
+-a Take_Down
+-a Roar
+-a Bite
+-a Rollout
+
+-i Oran_Berry
+-i Oran_Berry
+-i Oran_Berry
+-i Oran_Berry
+-i Persim_Berry
+-i Cheri_Berry

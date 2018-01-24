@@ -1,0 +1,20 @@
+%comment = //
+
+// lets try some tests
+
+// regex groups
+
+%prefix_l = (^|@SPACE)
+%suffix_l = (,|@SPACE|$|\?)
+%prefix_r = @FIRST
+%suffix_r = @LAST
+
+// ah mushu...
+"the Great Stone Dragon" = Mushu
+
+// simple currency change
+"$" (\d+) = "£" $1 ".00p"
+
+%import = src/translator/dictionary2.txt
+
+catch = drop

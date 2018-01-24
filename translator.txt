@@ -1,0 +1,185 @@
+Translator
+Basically a bulk find and replace using java with multiple rules
+version 2 gives basic programming language style rules
+
+=================================================
+Changes for version 1
+
+bug fixes?
+try to have escaped $\d on rhs
+see how backrefernces work and if this can cope
+they should since I don't touch that side of it
+i.e. [\w\d]+ @SPACE \1 = "backrefereces working"
+
+The overlapping of 'translations' could be a bit of an issue... find a way to fix it?
+can hack it in rule file, i.e.
+
+// case insensitve remember?
+%SUFFIX_l = _
+
+previous[^_] = translation
+...
+
+%SUFFIX_l = @EMPTY
+_ = @EMPTY
+
+
+Changes for version 2
+Version 2 implementation
+
+Storing code and rules in the same arrayList? need polymorphism
+
+Have a dedicated class for varible storing / code parsing -> CodeRunner (name subject to change)
+if (input.startsWith("$")) pass to CodeRunner
+
+after translation, clear CodeRunner variables
+
+control flow?
+Pass the instruction number (index of rule, so have to loop over rule list via index)
+calls to CodeRunner return the next instruction
+ in loops -> store while index and endLoop index. If predicate is true, move on to the next line
+   if endLoop reached, return index of while.
+   If predicate false, return endLoop index + 1
+ if statements?
+   store each if, elif, else and endIf index. go to each one depending on predicates
+
+
+Version 2 idea
+programming language style logic
+
+variables (syntax @(\w[\d\w_]*) (case sensitive) can be used in translations
+Already simple example, @EMPTY and @SPACE constants
+can contain strings or integers
+Other constants, NULL
+Scope, global. Unless I could add a marker for local scope, hmm...
+
+methods (\w[\d\w_]*) can be used to assign and change variables
+case insensitive
+TYPE(var)? return "String" or "Number"? type safety (implement by regex or try/catch?)
+
+SET(var, val) give variable var the value val
+// redundant? see below
+
+FIND(regex1, regex2, var) find first instance of regex1, extract regex2, store in var
+FIND_LAST(regex1, regex2, var) find last instance of regex1, extract regex2, store in var
+FIND(regex1, regex2, var, N) find Nth instance of regex1, extract regex2, store in var (start at 1 or 0?)
+FIND(regex1, var) variants where regex2 is impled to be "$0"
+
+usage, FIND("\d+", "$0", @x) // first number found is stored in @x
+FIND("X = (\d+)", "$1", @x) // find string X = some number, take number, assign to @x
+
+FIND("\d+", "$0", @y, 2) // second number found is stored in @x
+
+EXISTS(var) has a variable been created yet? (check storage) Best used with $FIND variants
+DIE end translation
+PRINT(var) put a string in an arrayList, access later?
+
+control flow blocks, IF/if and WHILE/while
+IF (boolean)
+  ...
+ELIF (boolean) // optional
+  ...
+ELSE // optional
+  ...
+ENDIF
+
+WHILE (boolean)
+  ...
+ENDWHILE
+BREAK and CONTINUE?
+
+
+operators
++ (add) - (subtract) / (divide) * (multiply) % (modulus) arithmetic
+& (and) | (or) ! (not) boolean
+String operators? concatinate is simple "the cat " "sat on the mat" = "the cat sat on the mat"
+
+how to evaluate expressions with operators?
+simply use @x + 3? so $SET($y, $x + 3)?
+
+how about something like this...
+$ @y = (@z - @x) / 3
+then could remove SET?
+
+in IF?
+IF (@y > @x & @y < 10)
+  ...
+
+Where should this be stored / parsed? a dedicated class?
+but the order is important with respect to the rules i.e.
+
+$ FIND("x = (\d+)", "$1", @x)
+$ @y = @x + 10
+"Result = " = $0 @y
+
+needs to be done in the right order...
+
+looking at it, $ could just be a marker for code
+so methods are just SET, FIND etc
+so they could have a space like so
+$ FIND(...)
+make FIND return?
+so, 
+$ FIND("\d+", @x)
+or
+$ @x = FIND("\d+")
+
+if the first method fails, the variables could just not be set
+if the second fails, return NULL?
+
+could I have multiline code markers?
+$~ to ~$
+
+so
+
+$~
+@x = FIND("x = (\d+)", "$1")
+@y = @X + 10
+~$
+"result is " = $0 @y
+
+for example.
+
+This means entire library files could be created containing methods and variables
+
+later, Arrays
+create one variable size N, store N+1 variables
+$ @array = ARRAY(int)
+
+$ @array = [1, 2, 3, 4]? syntax?
+would store
+@array = 4 // length of array
+@array[0] = 1 // 0 index is a must
+@array[1] = 2
+@array[2] = 3
+@array[3] = 4
+
+// new methods
+FINDALL(...) same as FIND, but stores all finds in an array
+LEN(var) return 0 for normal varibles, the length of arrays
+
+new type, "Array". How to check it? check heap for variable[\d]?
+fixed length, no append
+PRINT(@array), print "[@array[0], @array[1]...]" etc
+need care if copying arrays, i.e. @array2 = @array, especially in methods...
+passing an args array on translate
+
+meta parsing needed for loops i.e.
+@i = 0
+while (@i < len(@array))
+  @array[@i] = @i // parsing needed on both sides!
+  @i++
+endwhile
+
+
+User defined methods?
+$ DEFINE(method name, *params)
+  // code
+$ ENDDEF
+can return variables but may not
+This really comes into it's own if used with imports
+implementing this may be a bitch
+Documenting?
+
+After the above has been implemented, version 2 can begin
+Note: prefixes {% = config, @ = variable, $ = method}

@@ -1,0 +1,6 @@
+%comment = //
+
+// another set of translations
+// also tests the @SPACE constant
+
+[T|t]he @SPACE elephant = Dumbo

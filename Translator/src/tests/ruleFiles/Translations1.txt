@@ -1,0 +1,21 @@
+%comment = #
+# First test of translations
+z = c
+
+# prefix and suffix forcing word translations rather than letter translations
+%prefix_l = (^|@SPACE)
+%suffix_l = (@SPACE|$)
+%prefix_r = @FIRST
+%suffix_r = @LAST
+
+# without the above, "catch the cat" would be translated to "dogch the dog"
+cat = dog
+catch = drop
+
+# convert a 2 d.p. number to a fractional number
+# basically showing off regular expression matching
+(\d+) "." (\d{2}) = $1 " " $2 "/100"
+
+%import = src/tests/ruleFiles/Translations2.txt
+
+# testing comment reset after import

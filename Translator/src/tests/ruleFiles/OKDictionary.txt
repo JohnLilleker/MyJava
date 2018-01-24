@@ -1,0 +1,7 @@
+%comment = //
+
+Dumbo = Elephant
+
+// This is a comment
+
+\  = -

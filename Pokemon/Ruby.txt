@@ -1,0 +1,26 @@
+/ ruby team file
+
+-p Venusaur -l 50
+-a Petal_Dance
+-a Solar_Beam
+-a Sunny_Day
+-a Leech_Seed
+
+-p Skarmory -l 50 -N Skar -g MALE -n Impish -I Chesto_Berry
+-a Fury_Cutter
+-a Focus_Energy
+-a Stealth_Rock
+-a Sky_Attack
+
+-p Gardevoir -l 50 -I Oran_Berry
+-a Psychic
+-a Shadow_Ball
+-a Moonblast
+
+-i Sitrus_Berry
+-i Sitrus_Berry
+-i Leppa_Berry
+-i Shadow_Evo
+-i Thunder_Stone
+-i Thunder_Stone
+-i Sun_Stone

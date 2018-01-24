@@ -1,0 +1,4 @@
+%comment = #
+
+# recursive import
+%import = src/tests/ruleFiles/BadDict8.txt

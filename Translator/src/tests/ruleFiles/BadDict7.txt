@@ -1,0 +1,5 @@
+%comment = #
+# properly escaped
+Equals = \=
+# Error
+Same = =

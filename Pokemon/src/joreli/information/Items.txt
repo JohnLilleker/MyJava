@@ -1,0 +1,73 @@
+/ Items held by pokemon
+Stone Fire
+Stone Water
+Stone Leaf
+Stone Thunder
+Stone Sun
+Stone Moon
+Stone Dusk
+Stone Dawn
+
+MISC Everstone Pokemon+holding+this+cannot+evolve
+MISC Protector Evolves+Rhydon+if+traded+and+holding+this
+
+Evo Star NORMAL
+Evo Strike FIGHTING
+Evo Spirit GHOST
+Evo Flame FIRE
+Evo Drop WATER
+Evo Leaf GRASS
+Evo Vita LIFE
+Evo Pixie FAIRY
+Evo Iron STEEL
+Evo Toxic POISON
+Evo Stone ROCK
+Evo Earth GROUND
+Evo Drake DRAGON
+Evo Mind PSYCHIC
+Evo Shadow DARK
+Evo Snow ICE
+Evo Wing FLYING
+Evo Spark ELECTRIC
+Evo Insect BUG
+
+Berry Oran HP NONE 10 HP
+Berry Sitrus HP NONE 0.25 PART
+Berry Aguav HP BITTER 0.125 PART
+Berry Figy HP SPICY 0.125 PART
+Berry Iapapa HP SOUR 0.125 PART
+Berry Mago HP SWEET 0.125 PART
+Berry Wiki HP DRY 0.125 PART
+
+Berry Aspear condition FREEZE
+Berry Cheri condition PARALYSE
+Berry Chesto condition SLEEP
+Berry Lum condition All
+Berry Pecha condition POISON
+Berry Persim condition CONFUSE
+Berry Rawst condition BURN
+
+Berry Leppa PP 10
+
+Drive Burn FIRE
+Drive Chill ICE
+Drive Douse WATER
+Drive Shock ELECTRIC
+
+Plate Draco DRAGON
+Plate Dread DARK
+Plate Earth GROUND
+Plate Fist FIGHTING
+Plate Flame FIRE
+Plate Icicle ICE
+Plate Insect BUG
+Plate Iron STEEL
+Plate Meadow GRASS
+Plate Mind PSYCHIC
+Plate Pixie FAIRY
+Plate Sky FLYING
+Plate Splash WATER
+Plate Spooky GHOST
+Plate Stone ROCK
+Plate Toxic POISON
+Plate Zap ELECTRIC

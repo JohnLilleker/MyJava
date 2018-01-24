@@ -1,0 +1,15 @@
+/ Test set, surprisingly 50/50 mine and RELish's pokemon :P
+/name hp atk def sp.atk sp.def speed type_1 type_2 pre-evolve creator( level:attack)*
+Nanana 45 60 35 20 27 42 Fighting None none 100/0 REL
+Ocus 48 42 54 60 54 30 Psychic None none 50/50 JBL
+Cawca 49 36 28 10 28 50 Normal Flying none 50/50 REL
+Macpick 61 67 54 49 52 59 Normal Flying Cawca 50/50 REL
+Magorvus 75 79 68 58 65 87 Dark Flying Macpick 50/50 REL
+Aform 33 34 24 34 15 57 Normal None none 50/50 JBL
+Geritide 70 73 70 60 64 72 Bug Water none 0 JBL
+Vespastorm 70 74 80 69 61 75 Bug Electric none 0 JBL
+Terramantid 70 75 69 58 79 67 Bug Fighting none 0 JBL
+Droken 58 72 49 80 58 56 Dragon None none 50/50 REL
+Drakendrion 73 90 62 110 70 78 Dragon None Droken 50/50 JBL
+Sawasion 110 97 106 122 141 64 Fire Psychic none 0 REL
+Bambeon 110 70 90 76 103 80 Life None Eevee 87.5/12.5 REL
